@@ -19,7 +19,7 @@ echo "time to use ur apt to install something mecessary"
 dpkg --add-architecture i386
 sudo apt update
 sudo apt -y install libc6-i386
-sudo apt -y install git gdb python3-pip
+sudo apt -y install git gdb python3-pip tmux
 
 echo "time to use git to clone pwndbg and setup it"
 
