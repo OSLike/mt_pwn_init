@@ -30,8 +30,9 @@ cd pwndbg
 echo "this time i will install some useful tools for u"
 
 sudo apt source libc6-dev
-echo "this is pwntools"
+echo "this is pwntools and checksec"
 pip install pwntools
+pip install checksec-py
 echo "this is ruby, it can help u install one_gadget and seccomp-tools"
 sudo apt install ruby
 sudo gem install one_gadget
