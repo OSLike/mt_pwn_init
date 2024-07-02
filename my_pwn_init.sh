@@ -8,15 +8,9 @@ cd ~
 
 echo "I think that u have been changed apt source.."
 
-if [ ! -d ~/.pip ]; then
-	mkdir ~/.pip
-fi
-
-echo -e "[global]\nindex-url = https://pypi.douban.com/simple/\n[install]\ntrusted-host = pypi.douban.com" >  ~/.pip/pip.conf
-
 echo "time to use ur apt to install something mecessary"
 
-dpkg --add-architecture i386
+sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt -y install libc6-i386
 sudo apt -y install git gdb python3-pip tmux
@@ -34,13 +28,13 @@ echo "this is pwntools and checksec"
 pip install pwntools
 pip install checksec-py
 echo "this is ruby, it can help u install one_gadget and seccomp-tools"
-sudo apt install ruby
-sudo gem install one_gadget
-sudo gem install seccomp-tools
+sudo apt install -y ruby ruby-dev
+gem install one_gadget
+gem install seccomp-tools
 echo "this is patchelf, change a ELF's ld and libc"
-sudo apt install patchelf
+sudo apt install -y patchelf
 echo "this is glibc-all-in-one"
-sudo git clone https://github.com/matrix1001/glibc-all-in-one.git
+git clone https://github.com/matrix1001/glibc-all-in-one.git
 echo "this is LibcSearcher"
 pip install LibcSearcher
 
